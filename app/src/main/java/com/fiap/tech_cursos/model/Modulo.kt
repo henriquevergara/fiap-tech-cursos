@@ -9,5 +9,7 @@ data class Modulo(
     @SerializedName("nome")
     val nome: String,
     @SerializedName("carga_horaria")
-    val cargaHoraria: String
+    val cargaHoraria: String,
+    @SerializedName("conteudos")
+    val conteudos: List<Conteudo>
 ) : Parcelable

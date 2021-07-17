@@ -35,20 +35,6 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.446" />
 
-    <TextView
-        android:id="@+id/modulos"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="#009688"
-        android:text="Welcome"
-        android:textSize="15dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.561" />
-
     <ImageView
         android:id="@+id/imagem_curso"
         android:layout_width="400dp"
@@ -57,4 +43,16 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/ic_launcher_background" />
+
+    <ExpandableListView
+        android:id="@+id/expandableListView"
+        android:layout_width="397dp"
+        android:layout_height="316dp"
+        android:dividerHeight="0.5dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/curso_descricao"
+        app:layout_constraintVertical_bias="0.44"></ExpandableListView>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

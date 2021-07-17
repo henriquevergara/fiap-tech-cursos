@@ -14,7 +14,7 @@ import com.fiap.tech_cursos.model.CursoResponse
 import retrofit2.Call
 import retrofit2.Response
 
-class PainelActivity : AppCompatActivity(R.layout.activity_painel) {
+class PainelActivity : AppCompatActivity(R.layout.activity_painel_cursos) {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

@@ -6,7 +6,7 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.fiap.tech_cursos.R
-import com.fiap.tech_cursos.activities.MainActivity
+import com.fiap.tech_cursos.activities.CursoDetalhesActivity
 import com.fiap.tech_cursos.model.Curso
 
 class CardViewAdapter(
@@ -22,7 +22,7 @@ class CardViewAdapter(
         val context = holder.itemView.context
         holder.bind(cursos[position])
         holder.itemView.setOnClickListener {
-            val intent= Intent(holder.itemView.context, MainActivity::class.java)
+            val intent= Intent(holder.itemView.context, CursoDetalhesActivity::class.java)
             intent.putExtra("detalhes_curso", cursos[position])
             context.startActivity(intent)
             Log.i("ERROR: ","HELLO WORLD. " + cursos[position].nome)
