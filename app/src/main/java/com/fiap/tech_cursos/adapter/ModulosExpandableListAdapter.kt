@@ -8,14 +8,15 @@ import android.view.ViewGroup
 import android.widget.BaseExpandableListAdapter
 import android.widget.TextView
 import com.fiap.tech_cursos.R
+import com.fiap.tech_cursos.model.Modulo
 
-class ModulosExpandableListAdapter internal constructor(private val context: Context, private val modulos: List<String>, private val dataModulos: HashMap<String, List<String>>) : BaseExpandableListAdapter() {
+class ModulosExpandableListAdapter internal constructor(private val context: Context, private val modulos: List<Modulo>) : BaseExpandableListAdapter() {
     override fun getGroupCount(): Int {
         return this.modulos.size
     }
 
     override fun getChildrenCount(groupPosition: Int): Int {
-        return this.dataModulos[this.modulos[groupPosition]]!!.size
+        return this.modulos[groupPosition].conteudos!!.size
     }
 
     override fun getGroup(groupPosition: Int): Any {
@@ -23,7 +24,7 @@ class ModulosExpandableListAdapter internal constructor(private val context: Con
     }
 
     override fun getChild(groupPosition: Int, childPosition: Int): Any {
-        return this.dataModulos[this.modulos[groupPosition]]!![childPosition]
+        return this.modulos[groupPosition].conteudos.get(childPosition)
     }
 
     override fun getGroupId(groupPosition: Int): Long {
@@ -45,14 +46,14 @@ class ModulosExpandableListAdapter internal constructor(private val context: Con
         parent: ViewGroup?
     ): View {
         var convertView = convertView
-        val listTitle = getGroup(groupPosition) as String
+        val modulo = modulos.get(groupPosition)
         if (convertView == null) {
             val layoutInflater = this.context.getSystemService(Context.LAYOUT_INFLATER_SERVICE) as LayoutInflater
             convertView = layoutInflater.inflate(R.layout.list_group_modulos, null)
         }
-        val listTitleTextView = convertView!!.findViewById<TextView>(R.id.listTitle)
-        listTitleTextView.setTypeface(null, Typeface.BOLD)
-        listTitleTextView.text = listTitle
+        val tituloModulo = convertView!!.findViewById<TextView>(R.id.tituloModulo)
+        tituloModulo.setTypeface(null, Typeface.BOLD)
+        tituloModulo.text = modulo.nome + " - " + modulo.cargaHoraria
         return convertView
     }
 
@@ -64,18 +65,17 @@ class ModulosExpandableListAdapter internal constructor(private val context: Con
         parent: ViewGroup?
     ): View {
         var convertView = convertView
-        val expandedListText = getChild(groupPosition, childPosition) as String
+        val conteudo = modulos.get(groupPosition).conteudos.get(childPosition)
         if (convertView == null) {
             val layoutInflater = this.context.getSystemService(Context.LAYOUT_INFLATER_SERVICE) as LayoutInflater
             convertView = layoutInflater.inflate(R.layout.list_curso_modulo, null)
         }
-        val expandedListTextView = convertView!!.findViewById<TextView>(R.id.expandedListItem)
-        expandedListTextView.text = expandedListText
+        val tituloConteudo = convertView!!.findViewById<TextView>(R.id.conteudoListItem)
+        tituloConteudo.text = conteudo.descricao
         return convertView
     }
 
     override fun isChildSelectable(groupPosition: Int, childPosition: Int): Boolean {
         return true
     }
-
 }

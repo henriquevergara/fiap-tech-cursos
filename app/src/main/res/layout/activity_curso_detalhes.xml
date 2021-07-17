@@ -4,55 +4,83 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#54C1CF">
+    android:background="#FFFFFF">
 
 
     <TextView
-        android:id="@+id/nivel"
+        android:id="@+id/nomeCurso"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="#FFFFFF"
-        android:text="Welcome"
-        android:textSize="30dp"
-        android:textColor="#101010"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.358" />
-
-    <TextView
-        android:id="@+id/curso_descricao"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="#009688"
-        android:text="Welcome"
+        android:text="Curso"
         android:textSize="20dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/imagem_curso"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.446" />
+        app:layout_constraintVertical_bias="0.258" />
+
+    <TextView
+        android:id="@+id/descricaoCurso"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:background="#FFFFFF"
+        android:text="Descricao"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/expandableListView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.08"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/nivelCurso"
+        app:layout_constraintVertical_bias="0.119" />
+
+    <TextView
+        android:id="@+id/nivelCurso"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:background="#FFFFFF"
+        android:text="nivel"
+        android:textAllCaps="true"
+        android:textSize="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imagem_curso" />
 
     <ImageView
         android:id="@+id/imagem_curso"
         android:layout_width="400dp"
         android:layout_height="200dp"
+        android:layout_marginTop="28dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.454"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/nomeCurso"
         app:srcCompat="@drawable/ic_launcher_background" />
 
     <ExpandableListView
         android:id="@+id/expandableListView"
-        android:layout_width="397dp"
-        android:layout_height="316dp"
+        android:layout_width="391dp"
+        android:layout_height="185dp"
+        android:layout_marginBottom="120dp"
         android:dividerHeight="0.5dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/button_carrinho"
+        android:layout_width="286dp"
+        android:layout_height="56dp"
+        android:background="@drawable/background_botao"
+        android:padding="10dp"
+        android:text="Adicionar ao carrinho"
+        android:textAllCaps="false"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/curso_descricao"
-        app:layout_constraintVertical_bias="0.44"></ExpandableListView>
+        app:layout_constraintTop_toBottomOf="@+id/expandableListView" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
