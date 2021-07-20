@@ -19,9 +19,9 @@
             android:layout_height="wrap_content"
             android:background="@drawable/background_caixa_texto"
             android:ems="10"
+            android:hint="Usuário"
             android:inputType="textPersonName"
-            android:padding="10dp"
-            android:hint="Usuário"/>
+            android:padding="10dp" />
 
         <EditText
             android:id="@+id/editText_senha_login"
