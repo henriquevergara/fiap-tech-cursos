@@ -13,15 +13,29 @@
       android:orientation="vertical"
       android:background="#FFFFFF">
 
+      <TextView
+          android:id="@+id/textView_usuario_cadastro"
+          android:layout_width="match_parent"
+          android:layout_height="17dp"
+          android:text="Usuário" />
+
       <EditText
           android:id="@+id/editText_usuario_cadastro"
           android:layout_width="match_parent"
           android:layout_height="wrap_content"
           android:background="@drawable/background_caixa_texto"
           android:ems="10"
+          android:layout_marginTop="5dp"
           android:inputType="textPersonName"
           android:padding="10dp"
           android:hint="Usuário"/>
+
+      <TextView
+          android:id="@+id/textView_email_cadastro"
+          android:layout_width="match_parent"
+          android:layout_height="17dp"
+          android:layout_marginTop="16dp"
+          android:text="Email" />
 
       <EditText
           android:id="@+id/editText_email_cadastro"
@@ -29,11 +43,18 @@
           android:layout_height="wrap_content"
           android:background="@drawable/background_caixa_texto"
           android:ems="10"
-          android:layout_marginTop="16dp"
+          android:layout_marginTop="5dp"
           android:inputType="textEmailAddress"
           android:padding="10dp"
           android:textSize="18sp"
           android:hint="Email"/>
+
+      <TextView
+          android:id="@+id/textView_senha_cadastro"
+          android:layout_width="match_parent"
+          android:layout_height="17dp"
+          android:layout_marginTop="16dp"
+          android:text="Senha" />
 
       <EditText
           android:id="@+id/editText_senha_cadastro"
@@ -41,11 +62,18 @@
           android:layout_height="wrap_content"
           android:background="@drawable/background_caixa_texto"
           android:ems="10"
-          android:layout_marginTop="16dp"
+          android:layout_marginTop="5dp"
           android:inputType="textPassword"
           android:padding="10dp"
           android:textSize="18sp"
           android:hint="Senha" />
+
+      <TextView
+          android:id="@+id/textView_confSenha_cadastro"
+          android:layout_width="match_parent"
+          android:layout_height="17dp"
+          android:layout_marginTop="16dp"
+          android:text="Confirmar senha" />
 
       <EditText
           android:id="@+id/editText_confSenha_cadastro"
@@ -53,7 +81,7 @@
           android:layout_height="wrap_content"
           android:background="@drawable/background_caixa_texto"
           android:ems="10"
-          android:layout_marginTop="16dp"
+          android:layout_marginTop="5dp"
           android:inputType="textPassword"
           android:padding="10dp"
           android:textSize="18sp"

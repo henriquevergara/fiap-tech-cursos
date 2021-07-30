@@ -13,15 +13,29 @@
         android:orientation="vertical"
         android:background="#FFFFFF">
 
+        <TextView
+            android:id="@+id/textView_usuario_login"
+            android:layout_width="match_parent"
+            android:layout_height="17dp"
+            android:text="Usuário" />
+
         <EditText
             android:id="@+id/editText_usuario_login"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
             android:background="@drawable/background_caixa_texto"
             android:ems="10"
             android:hint="Usuário"
             android:inputType="textPersonName"
             android:padding="10dp" />
+
+        <TextView
+            android:id="@+id/textView_senha_login"
+            android:layout_marginTop="16dp"
+            android:layout_width="match_parent"
+            android:layout_height="17dp"
+            android:text="Senha" />
 
         <EditText
             android:id="@+id/editText_senha_login"
@@ -29,7 +43,7 @@
             android:layout_height="wrap_content"
             android:background="@drawable/background_caixa_texto"
             android:ems="10"
-            android:layout_marginTop="16dp"
+            android:layout_marginTop="5dp"
             android:inputType="textPassword"
             android:textSize="18sp"
             android:padding="10dp"
@@ -52,7 +66,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Cadastre-se"
-            android:layout_marginTop="16dp"
+            android:layout_marginTop="32dp"
             android:textAlignment="center"
             android:textColor="#1e94d2"
             android:textSize="18sp"/>
