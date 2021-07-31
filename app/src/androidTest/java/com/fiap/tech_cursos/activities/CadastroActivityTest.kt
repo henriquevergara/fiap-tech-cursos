@@ -14,21 +14,29 @@ import org.junit.runner.RunWith
 
 @LargeTest
 @RunWith(AndroidJUnit4::class)
-class LoginActivityTest {
+class CadastroActivityTest {
 
     @Rule
     @JvmField
     var mActivityTestRule = ActivityTestRule(LoginActivity::class.java)
 
     @Test
-    fun loginActivityTest() {
+    fun cadastroActivityTest() {
         Thread.sleep(1000)
 
-        onView(withId(R.id.editText_usuario_login)).perform(replaceText("henrique@email.com"))
+        onView(withId(R.id.textView_cadastre)).perform(click())
 
-        onView(withId(R.id.editText_senha_login)).perform(replaceText("123"), closeSoftKeyboard())
+        Thread.sleep(1000)
 
-        onView(withId(R.id.button_login)).perform(click())
+        onView(withId(R.id.editText_usuario_cadastro)).perform(replaceText("Henrique Vergara"))
+
+        onView(withId(R.id.editText_email_cadastro)).perform(replaceText("henrique@gmail.com"))
+
+        onView(withId(R.id.editText_senha_cadastro)).perform(replaceText("123"))
+
+        onView(withId(R.id.editText_confSenha_cadastro)).perform(replaceText("123"))
+
+        onView(withId(R.id.button_cadastro)).perform(click())
 
         Thread.sleep(1000)
 
