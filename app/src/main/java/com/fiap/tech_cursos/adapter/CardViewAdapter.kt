@@ -25,7 +25,7 @@ class CardViewAdapter(
             val intent= Intent(holder.itemView.context, CursoDetalhesActivity::class.java)
             intent.putExtra("detalhes_curso", cursos[position])
             context.startActivity(intent)
-            Log.i("ERROR: ","HELLO WORLD. " + cursos[position].nome)
+            Log.i("ERROR: ","Erro ao realizar o bind. " + cursos[position].nome)
         }
     }
 

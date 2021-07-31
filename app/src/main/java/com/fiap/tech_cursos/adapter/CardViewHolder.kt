@@ -10,7 +10,7 @@ import com.fiap.tech_cursos.model.Curso
 
 class CardViewHolder(cursoView: View) : RecyclerView.ViewHolder(cursoView) {
 
-    fun bind(curso: Curso){
+    fun bind(curso: Curso) {
         val title = itemView.findViewById<TextView>(R.id.title)
         title.text = curso.nome
         val description = itemView.findViewById<TextView>(R.id.description)
