@@ -44,7 +44,7 @@ class CartTabFragment : Fragment() {
         val coursesInCart =
             if (!json.isNullOrEmpty()) gson.fromJson<ArrayList<Curso>>(json) else arrayListOf<Curso>()
         val viewPager2 = this.activity?.findViewById<ViewPager2>(R.id.cart_viewpager)
-        recyclerView.adapter = CartCourseCardAdapter(coursesInCart.toList(), viewPager2)
+        recyclerView.adapter = CartCourseCardAdapter(coursesInCart.toMutableList(), viewPager2, this)
 
         val tvCount = binding.root.findViewById<TextView>(R.id.tv_courses_count)
         tvCount.text = getString(R.string.txt_cart_course_count, coursesInCart.count().toString())
