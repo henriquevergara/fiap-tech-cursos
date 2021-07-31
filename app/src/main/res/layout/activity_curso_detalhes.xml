@@ -67,5 +67,17 @@
             android:textAllCaps="false"
             android:textColor="#FFFFFF"
             android:textSize="18sp" />
+        <TextView
+            android:id="@+id/tv_course_in_cart"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:layout_marginTop="32dp"
+            android:gravity="center"
+            android:text="Curso já adicionado ao carrinho"
+            android:textAlignment="center"
+            android:textColor="@android:color/primary_text_light"
+            android:textSize="18sp"
+            android:visibility="invisible" />
     </LinearLayout>
 </FrameLayout>

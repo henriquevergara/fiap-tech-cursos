@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.PaymentTabFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/tv_payment_screen_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:text="Escolha um método de pagamento"
+            android:textColor="@android:color/primary_text_light"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <RadioGroup
+            android:id="@+id/rg_payment_methods"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_payment_screen_title">
+
+            <RadioButton
+                android:id="@+id/rbtn_card1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Cartão #1" />
+
+            <RadioButton
+                android:id="@+id/rbtn_card2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Cartão #2" />
+
+            <RadioButton
+                android:id="@+id/rbtn_card3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Cartão #3" />
+        </RadioGroup>
+
+        <Button
+            android:id="@+id/btn_finish_payment"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:text="Concluir Compra"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/rg_payment_methods" />
+
+        <Button
+            android:id="@+id/btn_back"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="16dp"
+            android:backgroundTint="@android:color/darker_gray"
+            android:text="@string/txt_btn_voltar"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btn_finish_payment" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>

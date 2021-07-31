@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:cardView="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cardView"
+    android:layout_width="match_parent"
+    android:layout_height="150dp"
+    android:layout_margin="8dp"
+    cardView:cardCornerRadius="8dp"
+    cardView:cardElevation="8dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/iv_cart_course_image"
+            android:layout_width="110dp"
+            android:layout_height="90dp"
+            cardView:layout_constraintStart_toStartOf="parent"
+            cardView:layout_constraintTop_toTopOf="parent"
+            tools:srcCompat="@tools:sample/backgrounds/scenic" />
+
+        <TextView
+            android:id="@+id/tv_course_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="Nome do Curso"
+            android:textColor="@android:color/primary_text_light"
+            android:textStyle="bold"
+            cardView:layout_constraintEnd_toEndOf="parent"
+            cardView:layout_constraintStart_toEndOf="@+id/iv_cart_course_image"
+            cardView:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_course_desc"
+            android:layout_width="0dp"
+            android:layout_height="53dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="10dp"
+            android:ellipsize="end"
+            android:maxLines="3"
+            android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+            cardView:layout_constraintEnd_toEndOf="parent"
+            cardView:layout_constraintStart_toEndOf="@+id/iv_cart_course_image"
+            cardView:layout_constraintTop_toBottomOf="@+id/tv_course_title" />
+
+        <Button
+            android:id="@+id/btn_remove"
+            style="@style/Widget.MaterialComponents.Button.TextButton.Icon"
+            android:layout_width="wrap_content"
+            android:layout_height="23dp"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="4dp"
+            android:fontFamily="sans-serif"
+            android:insetTop="0dp"
+            android:insetBottom="0dp"
+            android:padding="4dp"
+            android:text="@string/txt_remove"
+            android:textAlignment="textStart"
+            android:textAllCaps="false"
+            android:textSize="10sp"
+            cardView:icon="@drawable/ic_baseline_delete_24"
+            cardView:iconPadding="4dp"
+            cardView:iconSize="14dp"
+            cardView:layout_constraintStart_toStartOf="parent"
+            cardView:layout_constraintTop_toBottomOf="@+id/iv_cart_course_image" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="15dp"
+            android:layout_marginBottom="8dp"
+            cardView:layout_constraintBottom_toBottomOf="parent"
+            cardView:layout_constraintEnd_toEndOf="parent"
+            cardView:layout_constraintTop_toBottomOf="@+id/tv_course_desc">
+
+            <TextView
+                android:id="@+id/tv_from_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/txt_from_price"
+                android:textSize="12sp"
+                cardView:layout_constraintEnd_toEndOf="parent"
+                cardView:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_final_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="@string/txt_final_price"
+                android:textColor="@android:color/primary_text_light"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                cardView:layout_constraintStart_toStartOf="parent"
+                cardView:layout_constraintTop_toBottomOf="@+id/tv_from_price" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>

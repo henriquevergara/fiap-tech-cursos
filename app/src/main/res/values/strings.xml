@@ -1,3 +1,16 @@
 <resources>
     <string name="app_name">tech-cursos</string>
+    <string name="txt_remove"><u>Remover</u></string>
+    <string name="txt_save_for_later"><u>Salvar para depois</u></string>
+    <string name="txt_from_price"><strike>De R$ %1$s</strike> por</string>
+    <string name="txt_final_price">R$ %1$s</string>
+    <string name="SHARED_PREFERENCES">Shared Preferences</string>
+    <string name="cart_courses">cart_courses</string>
+    <string name="txt_tabitem_cart">Carrinho</string>
+    <string name="txt_tabitem_payment">Pagamento</string>
+    <string name="txt_cart_course_count">%1$s Curso no carrinho</string>
+    <string name="txt_cart_total_lbl">Total:</string>
+    <string name="txt_cart_total_value">R$ %.2f</string>
+    <string name="txt_btn_finish">Finalizar</string>
+    <string name="txt_btn_voltar">Voltar para Carrinho</string>
 </resources>
