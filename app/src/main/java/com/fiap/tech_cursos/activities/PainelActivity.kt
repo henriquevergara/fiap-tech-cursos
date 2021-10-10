@@ -23,7 +23,7 @@ class PainelActivity : AppCompatActivity(R.layout.activity_painel_cursos) {
 
     fun getData(){
         val retrofitClient = RetrofitConfig
-            .getRetrofitInstance("https://run.mocky.io/")
+            .getRetrofitInstance("https://api-tech-cursos.herokuapp.com/")
 
         val endpoint = retrofitClient.create(ApiInterface::class.java)
         val callback = endpoint.getCursos()
