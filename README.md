@@ -22,16 +22,14 @@ Este projeto foi desenvolvido para simular uma plataforma de cursos online, prop
 Instruções Gerais:
 * Aplicativo desenvolvido para plataforma Android, utilizando Android Studio.
 * Para se logar na plataforma, não esta sendo utilizado Autenticação, ja que o foco da entrega de valor estava na navegação e utilização do app, então basta apenas acessar o aplicativo pelo botão "Entrar" para se conectar a plataforma.
-* A listagem dos cursos da plataforma esta sendo consumida de uma api gerada com https://designer.mocky.io/, e a integração foi feita utilizando a biblioteca Retrofit.
+* A listagem dos cursos da plataforma esta sendo consumida de uma api desenvolvida em Java e utilizando o framework Spring, para facilitar o uso da API, foi realizado um deploy na plataforma Heroku, e a integração foi feita utilizando a biblioteca Retrofit.
 
 ### Tecnologias utilizadas
 
 * [Kotlin](https://developer.android.com/kotlin)
 * [Retrofit](https://square.github.io/retrofit/)
 * [Glide](https://github.com/bumptech/glide)
-* [Mocky](https://designer.mocky.io/)
-
-
+* [API](https://api-tech-cursos.herokuapp.com/cursos)
 
 <!-- GETTING STARTED -->
 # Feedback de usuários externos
